@@ -11,10 +11,11 @@ export class Counter extends Component {
 
   handleClick = (event) => {
     console.log(event);
-    increment(1);
+    this.props.increment(1);
   }
 
   render() {
+    console.log('Counter props:', this.props);
     return (
     <div>{this.props.count}
       <Button handleClick={this.handleClick}/>
@@ -25,7 +26,7 @@ export class Counter extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      count: state
+      count: state.counterReducer
     };
 };
 

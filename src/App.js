@@ -6,6 +6,7 @@ import { Counter } from './components/Counter';
 
 class App extends Component {
   render() {
+    console.log('App props:', this.props);
     return (
       <div className="App">
         <div className="App-header">
@@ -23,7 +24,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    // client: state.auth.client
+    value: state
   }
 }
 
