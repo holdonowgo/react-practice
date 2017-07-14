@@ -11,8 +11,7 @@ import rootReducer from './reducers';
 const store = createStore (
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENTION__ &&
-  window.__REDUX_DEVTOOLS_EXTENTION__(),
-  applyMiddleware(promiseMiddlware()),
+  window.__REDUX_DEVTOOLS_EXTENTION__()
 );
 
 ReactDOM.render(

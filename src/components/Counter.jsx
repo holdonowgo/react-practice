@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button } from './Button';
-import { increment } from '../actions/counter';
+import increment from '../actions/counter';
 
 export class Counter extends Component {
-  super(props) {
-    ///do more stuff here
-    // thisstate = { count: 0 };
-  }
+  // super(props) {
+  //   ///do more stuff here
+  //   // thisstate = { count: 0 };
+  // }
 
   handleClick = (event) => {
     console.log(event);
@@ -30,4 +30,8 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect( mapStateToProps, { increment } )(Counter);
+function mapDispatchToProps(){
+  return {increment};
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )(Counter);
