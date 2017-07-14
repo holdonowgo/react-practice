@@ -17,7 +17,7 @@ export class Counter extends Component {
   render() {
     return (
     <div>{this.props.count}
-      <Button onClick={this.handleClick}/>
+      <Button handleClick={this.handleClick}/>
     </div>
     )
   }

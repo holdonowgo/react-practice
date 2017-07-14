@@ -2,6 +2,6 @@ import React from 'react';
 
 export const Button = (props) => (
   <div>
-    <button>Add</button>
+    <button onClick={props.handleClick}>Add</button>
   </div>
 )
