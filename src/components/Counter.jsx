@@ -28,4 +28,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect( mapStateToProps, { increment } )
+export default connect( mapStateToProps, { increment } )(Counter);
