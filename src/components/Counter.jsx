@@ -9,14 +9,15 @@ export class Counter extends Component {
     // thisstate = { count: 0 };
   }
 
-  handleClick(event) {
+  handleClick = (event) => {
+    console.log(event);
     increment(1);
   }
 
   render() {
     return (
     <div>{this.props.count}
-      <Button onClick={() => this.handleClick}/>
+      <Button onClick={this.handleClick}/>
     </div>
     )
   }
